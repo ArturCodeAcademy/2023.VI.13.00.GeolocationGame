@@ -1,0 +1,62 @@
+[
+  {
+    "City": "Moscow",
+    "Latitude": 55.7558,
+    "Longitude": 37.6173
+  },
+  {
+    "City": "London",
+    "Latitude": 51.5074,
+    "Longitude": -0.1278
+  },
+  {
+    "City": "New York",
+    "Latitude": 40.7128,
+    "Longitude": -74.0060
+  },
+  {
+    "City": "Tokyo",
+    "Latitude": 35.6762,
+    "Longitude": 139.6503
+  },
+  {
+    "City": "Sydney",
+    "Latitude": -33.8688,
+    "Longitude": 151.2093
+  },
+  {
+    "City": "Rio de Janeiro",
+    "Latitude": -22.9068,
+    "Longitude": -43.1729
+  },
+  {
+    "City": "Cape Town",
+    "Latitude": -33.9249,
+    "Longitude": 18.4241
+  },
+  {
+    "City": "Buenos Aires",
+    "Latitude": -34.6037,
+    "Longitude": -58.3816
+  },
+  {
+    "City": "Reykjavik",
+    "Latitude": 64.1466,
+    "Longitude": -21.9426
+  },
+  {
+    "City": "Anchorage",
+    "Latitude": 61.2181,
+    "Longitude": -149.9003
+  },
+  {
+    "City": "Nuuk",
+    "Latitude": 64.1750,
+    "Longitude": -51.7380
+  },
+  {
+    "City": "Longyearbyen",
+    "Latitude": 78.2232,
+    "Longitude": 15.6267
+  }
+]
