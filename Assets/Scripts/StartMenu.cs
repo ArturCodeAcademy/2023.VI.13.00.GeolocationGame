@@ -32,7 +32,7 @@ public class StartMenu : MonoBehaviour
     {
         TextAsset citiesTextAsset = Resources.Load<TextAsset>("Cities");
         return Newtonsoft.Json.JsonConvert.DeserializeObject<LocationCoords[]>(citiesTextAsset.text)
-            .OrderBy(c => c.City).ToArray();
+            .GroupBy(c => c.City).Select(g => g.First()).OrderBy(c => c.City).ToArray();
     }
 
 	private void OnCityButtonClicked(LocationCoords city)
@@ -44,6 +44,7 @@ public class StartMenu : MonoBehaviour
 
 	public void OnStartButtonClicked()
 	{
+        Container.SelectedLocationCoords = _coords;
 		SceneManager.LoadScene("Level");
 	}
 

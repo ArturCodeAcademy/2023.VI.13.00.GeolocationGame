@@ -58,5 +58,360 @@
     "City": "Longyearbyen",
     "Latitude": 78.2232,
     "Longitude": 15.6267
+  },
+  {
+    "City": "Vilnius",
+    "Latitude": 54.7008,
+    "Longitude": 25.0882
+  },
+  {
+    "City": "Paris",
+    "Latitude": 48.8566,
+    "Longitude": 2.3522
+  },
+  {
+    "City": "Rome",
+    "Latitude": 41.9028,
+    "Longitude": 12.4964
+  },
+  {
+    "City": "Berlin",
+    "Latitude": 52.5200,
+    "Longitude": 13.4050
+  },
+  {
+    "City": "Beijing",
+    "Latitude": 39.9042,
+    "Longitude": 116.4074
+  },
+  {
+    "City": "Dubai",
+    "Latitude": 25.276987,
+    "Longitude": 55.296249
+  },
+  {
+    "City": "Mumbai",
+    "Latitude": 19.0760,
+    "Longitude": 72.8777
+  },
+  {
+    "City": "Toronto",
+    "Latitude": 43.651070,
+    "Longitude": -79.347015
+  },
+{
+    "City": "Mexico City",
+    "Latitude": 19.432608,
+    "Longitude": -99.133209
+  },
+  {
+    "City": "Santiago",
+    "Latitude": -33.448890,
+    "Longitude": -70.669265
+  },
+  {
+    "City": "Lima",
+    "Latitude": -12.046373,
+    "Longitude": -77.042755
+  },
+  {
+    "City": "Bogota",
+    "Latitude": 4.710989,
+    "Longitude": -74.072090
+  },
+  {
+    "City": "Caracas",
+    "Latitude": 10.480594,
+    "Longitude": -66.903606
+  },
+  {
+    "City": "Sao Paulo",
+    "Latitude": -23.550520,
+    "Longitude": -46.633309
+  },
+  {
+    "City": "Cairo",
+    "Latitude": 30.044420,
+    "Longitude": 31.235712
+  },
+  {
+    "City": "Cape Town",
+    "Latitude": -33.924870,
+    "Longitude": 18.424055
+  },
+  {
+    "City": "Nairobi",
+    "Latitude": -1.292066,
+    "Longitude": 36.821946
+  },
+  {
+    "City": "Marrakech",
+    "Latitude": 31.629472,
+    "Longitude": -7.981084
+  },
+  {
+    "City": "Madrid",
+    "Latitude": 40.416775,
+    "Longitude": -3.703790
+  },
+  {
+    "City": "Barcelona",
+    "Latitude": 41.385064,
+    "Longitude": 2.173403
+  },
+  {
+    "City": "Lisbon",
+    "Latitude": 38.722252,
+    "Longitude": -9.139337
+  },
+  {
+    "City": "Athens",
+    "Latitude": 37.983810,
+    "Longitude": 23.727539
+  },
+  {
+    "City": "Istanbul",
+    "Latitude": 41.008238,
+    "Longitude": 28.978359
+  },
+  {
+    "City": "Dublin",
+    "Latitude": 53.349805,
+    "Longitude": -6.260310
+  },
+  {
+    "City": "Edinburgh",
+    "Latitude": 55.953251,
+    "Longitude": -3.188267
+  },
+  {
+    "City": "Stockholm",
+    "Latitude": 59.329323,
+    "Longitude": 18.068581
+  },
+  {
+    "City": "Helsinki",
+    "Latitude": 60.169856,
+    "Longitude": 24.938379
+  },
+  {
+    "City": "Oslo",
+    "Latitude": 59.913868,
+    "Longitude": 10.752245
+  },
+  {
+    "City": "Copenhagen",
+    "Latitude": 55.676097,
+    "Longitude": 12.568337
+  },
+  {
+    "City": "Amsterdam",
+    "Latitude": 52.370216,
+    "Longitude": 4.895168
+  },
+  {
+    "City": "Brussels",
+    "Latitude": 50.850346,
+    "Longitude": 4.351721
+  },
+  {
+    "City": "Prague",
+    "Latitude": 50.075539,
+    "Longitude": 14.437800
+  },
+  {
+    "City": "Vienna",
+    "Latitude": 48.208176,
+    "Longitude": 16.373819
+  },
+  {
+    "City": "Zurich",
+    "Latitude": 47.376887,
+    "Longitude": 8.541694
+  },
+  {
+    "City": "Munich",
+    "Latitude": 48.135125,
+    "Longitude": 11.581981
+  },
+  {
+    "City": "Milan",
+    "Latitude": 45.464204,
+    "Longitude": 9.189982
+  },
+  {
+    "City": "Riga",
+    "Latitude": 56.949649,
+    "Longitude": 24.105186
+  },
+  {
+    "City": "Budapest",
+    "Latitude": 47.497912,
+    "Longitude": 19.040235
+  },
+  {
+    "City": "Warsaw",
+    "Latitude": 52.229676,
+    "Longitude": 21.012229
+  },
+  {
+    "City": "Krakow",
+    "Latitude": 50.064650,
+    "Longitude": 19.944980
+  },
+{
+    "City": "Bucharest",
+    "Latitude": 44.426765,
+    "Longitude": 26.102537
+  },
+  {
+    "City": "Moscow",
+    "Latitude": 55.755826,
+    "Longitude": 37.617300
+  },
+  {
+    "City": "St. Petersburg",
+    "Latitude": 59.934280,
+    "Longitude": 30.335099
+  },
+  {
+    "City": "Istanbul",
+    "Latitude": 41.008238,
+    "Longitude": 28.978359
+  },
+  {
+    "City": "Tel Aviv",
+    "Latitude": 32.085300,
+    "Longitude": 34.781768
+  },
+  {
+    "City": "Jerusalem",
+    "Latitude": 31.768319,
+    "Longitude": 35.213710
+  },
+  {
+    "City": "Dubai",
+    "Latitude": 25.276987,
+    "Longitude": 55.296249
+  },
+  {
+    "City": "Cairo",
+    "Latitude": 30.044420,
+    "Longitude": 31.235712
+  },
+  {
+    "City": "Cape Town",
+    "Latitude": -33.924870,
+    "Longitude": 18.424055
+  },
+  {
+    "City": "Nairobi",
+    "Latitude": -1.292066,
+    "Longitude": 36.821946
+  },
+  {
+    "City": "Marrakech",
+    "Latitude": 31.629472,
+    "Longitude": -7.981084
+  },
+  {
+    "City": "Madrid",
+    "Latitude": 40.416775,
+    "Longitude": -3.703790
+  },
+  {
+    "City": "Barcelona",
+    "Latitude": 41.385064,
+    "Longitude": 2.173403
+  },
+  {
+    "City": "Lisbon",
+    "Latitude": 38.722252,
+    "Longitude": -9.139337
+  },
+  {
+    "City": "Athens",
+    "Latitude": 37.983810,
+    "Longitude": 23.727539
+  },
+  {
+    "City": "Istanbul",
+    "Latitude": 41.008238,
+    "Longitude": 28.978359
+  },
+  {
+    "City": "Dublin",
+    "Latitude": 53.349805,
+    "Longitude": -6.260310
+  },
+  {
+    "City": "Edinburgh",
+    "Latitude": 55.953251,
+    "Longitude": -3.188267
+  },
+  {
+    "City": "Stockholm",
+    "Latitude": 59.329323,
+    "Longitude": 18.068581
+  },
+  {
+    "City": "Helsinki",
+    "Latitude": 60.169856,
+    "Longitude": 24.938379
+  },
+  {
+    "City": "Oslo",
+    "Latitude": 59.913868,
+    "Longitude": 10.752245
+  },
+  {
+    "City": "Copenhagen",
+    "Latitude": 55.676097,
+    "Longitude": 12.568337
+  },
+  {
+    "City": "Amsterdam",
+    "Latitude": 52.370216,
+    "Longitude": 4.895168
+  },
+  {
+    "City": "Brussels",
+    "Latitude": 50.850346,
+    "Longitude": 4.351721
+  },
+  {
+    "City": "Prague",
+    "Latitude": 50.075539,
+    "Longitude": 14.437800
+  },
+  {
+    "City": "Vienna",
+    "Latitude": 48.208176,
+    "Longitude": 16.373819
+  },
+  {
+    "City": "Zurich",
+    "Latitude": 47.376887,
+    "Longitude": 8.541694
+  },
+  {
+    "City": "Munich",
+    "Latitude": 48.135125,
+    "Longitude": 11.581981
+  },
+  {
+    "City": "Milan",
+    "Latitude": 45.464204,
+    "Longitude": 9.189982
+  },
+  {
+    "City": "Riga",
+    "Latitude": 56.949649,
+    "Longitude": 24.105186
+  },
+  {
+    "City": "Budapest",
+    "Latitude": 47.497912,
+    "Longitude": 19.040235
   }
 ]
