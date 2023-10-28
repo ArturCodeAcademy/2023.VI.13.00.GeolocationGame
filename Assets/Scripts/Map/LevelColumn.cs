@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class LevelColumn : MonoBehaviour
 {
     private BoxCollider2D _collider;
@@ -9,7 +10,7 @@ public class LevelColumn : MonoBehaviour
     private void Awake()
     {
 		_collider = GetComponent<BoxCollider2D>();
-		_renderer = GetComponentInChildren<SpriteRenderer>();
+		_renderer = GetComponent<SpriteRenderer>();
 	}
 
     public void SetHeight(float height)
