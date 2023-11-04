@@ -17,6 +17,9 @@ public class LevelGenerator : MonoBehaviour
 	[SerializeField, Min(1)] private float _minHeight;
 	[SerializeField] private Gradient _temperatureColorGradient;
 
+	[Space(5)]
+	[SerializeField] private GameObject _player;
+
 	private DataRequester _dataRequester;
 
 	private void Awake()
@@ -49,5 +52,8 @@ public class LevelGenerator : MonoBehaviour
 
 			LevelColumns.Add(column);
 		}
+
+		float posY = LevelColumns[0].GetComponent<SpriteRenderer>().size.y;
+		_player.transform.position = new Vector3(0, posY);
 	}
 }
