@@ -49,6 +49,7 @@ public class LevelGenerator : MonoBehaviour
 			float height = Mathf.Lerp(_minHeight, _maxHeight, tempPercent);
 			column.SetHeight(height);
 			column.SetColor(_temperatureColorGradient.Evaluate(tempPercent));
+			column.SetInfo(data);
 
 			LevelColumns.Add(column);
 		}

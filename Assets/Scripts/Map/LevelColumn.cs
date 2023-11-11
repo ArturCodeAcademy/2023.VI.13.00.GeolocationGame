@@ -1,9 +1,18 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class LevelColumn : MonoBehaviour
 {
+	[SerializeField] private Transform _infoPanel;
+	[SerializeField] private TMP_Text _dateText;
+	[SerializeField] private TMP_Text _temperatureText;
+	[SerializeField] private TMP_Text _windText;
+	[SerializeField] private Transform _windDirection;
+	[SerializeField] Vector2 _infoPanelOffset;
+
     private BoxCollider2D _collider;
     private SpriteRenderer _renderer;
 
@@ -20,6 +29,18 @@ public class LevelColumn : MonoBehaviour
 		transform.position = new Vector3(	transform.position.x,
 											height / 2,
 											transform.position.z);
+
+		_infoPanel.transform.localPosition = new Vector3(0, height / 2)
+										+ (Vector3)_infoPanelOffset;
+	}
+
+	public void SetInfo(MeteoData data)
+	{
+		_temperatureText.text = $"{data.Temperature}°";
+		_windText.text = $"{data.WindSpeed} m/s";
+		_windDirection.rotation =
+			new Quaternion(0, 0, data.WindDirection, 0);
+		_dateText.text = $"{data.Time:dd.mm.yyyy}\n{data.Time:HH:mm}";
 	}
 
 	public void SetColor(Color color)
