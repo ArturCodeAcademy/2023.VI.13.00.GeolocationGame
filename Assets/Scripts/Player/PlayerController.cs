@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 	[field:SerializeField, Min(0)] public float MaxDistance { get; set; }
 
 	public event Action OnStartDrag;
-	public event Action OnDrag;
+	public event Action<float> OnDrag;
 	public event Action OnRelease;
 	public event Action<Collision2D> OnLand;
 
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 		if (!Active)
 			return;
 
-		OnDrag?.Invoke();
+		OnDrag?.Invoke(GetForceCoeficient());
 	}
 
 	private void OnMouseUp()
@@ -54,11 +54,17 @@ public class PlayerController : MonoBehaviour
 
 	public float CalculateForce()
 	{
-		float distance = Vector2.Distance(transform.position,
-									Camera.main.ScreenToWorldPoint(Input.mousePosition));
-		distance = Mathf.Clamp(distance, 0, MaxDistance);
-		float force = Mathf.Lerp(0, MaxVelocity, distance / MaxDistance);
+		float coeficient = GetForceCoeficient();
+		float force = Mathf.Lerp(0, MaxVelocity, coeficient);
 		return force;
+	}
+
+	private float GetForceCoeficient()
+	{
+		float distance = Vector2.Distance(transform.position,
+											Camera.main.ScreenToWorldPoint(Input.mousePosition));
+		distance = Mathf.Clamp(distance, 0, MaxDistance);
+		return distance / MaxDistance;
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)

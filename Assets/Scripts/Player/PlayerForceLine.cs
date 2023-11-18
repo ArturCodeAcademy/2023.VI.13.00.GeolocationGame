@@ -44,7 +44,7 @@ public class PlayerForceLine : MonoBehaviour
 		_lineRenderer.enabled = false;
 	}
 
-	private void UpdateLine()
+	private void UpdateLine(float _)
 	{
 		_lineRenderer.SetPosition(1, _playerController.transform.position + _offset);
 		Vector2 direction = _playerController.GetDirection();

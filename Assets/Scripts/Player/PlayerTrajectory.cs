@@ -45,7 +45,7 @@ public class PlayerTrajectory : MonoBehaviour
 		_lineRenderer.enabled = false;
 	}
 
-	private void UpdateLine()
+	private void UpdateLine(float _)
 	{
 		float force = _playerController.CalculateForce();
 		Vector2 direction = _playerController.GetDirection();
