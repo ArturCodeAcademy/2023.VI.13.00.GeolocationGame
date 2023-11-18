@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 	public event Action OnStartDrag;
 	public event Action OnDrag;
 	public event Action OnRelease;
-	public event Action OnLand;
+	public event Action<Collision2D> OnLand;
 
     private Rigidbody2D _rb;
 
@@ -65,8 +65,9 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.contacts[0].point.y < transform.position.y)
 		{
+			_rb.velocity = Vector2.zero;
 			Active = true;
-			OnLand?.Invoke();
+			OnLand?.Invoke(other);
 		}
 	}
 }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(SpriteRenderer))]
 public class LevelColumn : MonoBehaviour
 {
+	public MeteoData Data { get; private set; }
+
 	[SerializeField] private Transform _infoPanel;
 	[SerializeField] private TMP_Text _dateText;
 	[SerializeField] private TMP_Text _temperatureText;
@@ -36,10 +38,10 @@ public class LevelColumn : MonoBehaviour
 
 	public void SetInfo(MeteoData data)
 	{
+		Data = data;
 		_temperatureText.text = $"{data.Temperature}°";
 		_windText.text = $"{data.WindSpeed} m/s";
-		_windDirection.rotation =
-			new Quaternion(0, 0, data.WindDirection, 0);
+		_windDirection.rotation = Quaternion.Euler(0, 0, data.WindDirection);
 		_dateText.text = $"{data.Time:dd.mm.yyyy}\n{data.Time:HH:mm}";
 	}
 
