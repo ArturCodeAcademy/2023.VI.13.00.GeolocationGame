@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerController))]
 public class PlayerWindEffect : MonoBehaviour
 {
-	[SerializeField, Range(0.01f, 500)] private float _windSpeedDivider = 10;
+	public MeteoData? CurrentMeteoData { get; private set; }
+	public event Action<MeteoData?> OnMeteoDataChanged;
 
-	private MeteoData? _currentMeteoData;
+	[SerializeField, Range(0.01f, 500)] private float _windSpeedDivider = 10;
+	
 	private bool _isFlying;
 
 	private Rigidbody2D _rb;
@@ -20,11 +23,11 @@ public class PlayerWindEffect : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (!_isFlying || _currentMeteoData is null)
+		if (!_isFlying || CurrentMeteoData is null)
 			return;
 
-		Vector2 direction = (Vector2)(Quaternion.Euler(0, 0, _currentMeteoData.WindDirection) * Vector2.up);
-		_rb.AddForce(direction * _currentMeteoData.WindSpeed / _windSpeedDivider, ForceMode2D.Force);
+		Vector2 direction = (Vector2)(Quaternion.Euler(0, 0, CurrentMeteoData.WindDirection) * Vector2.up);
+		_rb.AddForce(direction * CurrentMeteoData.WindSpeed / _windSpeedDivider, ForceMode2D.Force);
 	}
 
 	private void OnEnable()
@@ -42,7 +45,8 @@ public class PlayerWindEffect : MonoBehaviour
 	private void OnLand(Collision2D other)
 	{
 		_isFlying = false;
-		_currentMeteoData = other.gameObject.GetComponent<LevelColumn>()?.Data;
+		CurrentMeteoData = other.gameObject.GetComponent<LevelColumn>()?.Data;
+		OnMeteoDataChanged?.Invoke(CurrentMeteoData);
 	}
 
 	private void OnRelease()
