@@ -12,12 +12,22 @@ public class PlayerController : MonoBehaviour
 	public event Action<float> OnDrag;
 	public event Action OnRelease;
 	public event Action<Collision2D> OnLand;
+	public event Action OnFallOutOfLevel;
 
     private Rigidbody2D _rb;
 
 	private void Awake()
 	{
 		_rb = GetComponent<Rigidbody2D>();
+	}
+
+	private void Update()
+	{
+		if (transform.position.y < 0)
+		{
+			OnFallOutOfLevel?.Invoke();
+			enabled = false;
+		}
 	}
 
 	private void OnMouseDown()
