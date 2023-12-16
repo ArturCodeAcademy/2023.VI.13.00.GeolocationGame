@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PortalEffect))]
 public class PlayerController : MonoBehaviour
 {
 	public bool Active { get; private set; } = true;
@@ -15,16 +16,27 @@ public class PlayerController : MonoBehaviour
 	public event Action OnFallOutOfLevel;
 
     private Rigidbody2D _rb;
+	private PortalEffect _portalEffect;
+	private Vector2 _lastColumnPosition;
 
 	private void Awake()
 	{
 		_rb = GetComponent<Rigidbody2D>();
+		_portalEffect = GetComponent<PortalEffect>();
 	}
 
 	private void Update()
 	{
 		if (transform.position.y < 0)
 		{
+			if (_portalEffect.IsEffectActive)
+			{
+				transform.position = _lastColumnPosition;
+				_rb.velocity = Vector2.zero;
+				Active = true;
+				return;
+			}
+
 			OnFallOutOfLevel?.Invoke();
 			enabled = false;
 		}
@@ -81,6 +93,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.contacts[0].point.y < transform.position.y)
 		{
+			_lastColumnPosition = transform.position;
 			_rb.velocity = Vector2.zero;
 			Active = true;
 			OnLand?.Invoke(other);

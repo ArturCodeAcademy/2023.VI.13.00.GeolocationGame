@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class IncreaseSize : EffectBase
 {
-	[SerializeField, Min(0)] private float _effectDuration = 2;
 	[SerializeField, Range(0.1f, 5)] private float _sizeChangeSpeed = 1;
 	[SerializeField, Min(1)] private float _maxSize = 4;
 

@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class EffectBase : MonoBehaviour
 {
-    [field:SerializeField]
-    [field:Min(0)]
-    public float EffectDuration { get; }
+	[SerializeField, Min(0)] protected float _effectDuration = 2;
+	public float EffectDuration => _effectDuration;
 
     public event Action<float> OnEffectRestarted;
     public event Action OnEffectEnded;

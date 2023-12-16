@@ -1,3 +1,1 @@
-using UnityEngine;
-
-public class IncreaseSizeItem : MonoBehaviour {}
+public class IncreaseSizeItem : Item { }
