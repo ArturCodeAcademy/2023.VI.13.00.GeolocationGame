@@ -912,7 +912,7 @@ MonoBehaviour:
   _minHeight: 10
   _temperatureColorGradient:
     serializedVersion: 2
-    key0: {r: 0, g: 0.95917225, b: 1, a: 1}
+    key0: {r: 0, g: 0.96078444, b: 1, a: 1}
     key1: {r: 0.25867733, g: 0.96981215, b: 0.739396, a: 1}
     key2: {r: 0.9926069, g: 1, b: 0, a: 0}
     key3: {r: 1, g: 0.009314008, b: 0, a: 0}
