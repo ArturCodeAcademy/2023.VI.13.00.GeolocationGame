@@ -21,6 +21,11 @@ public class LevelGenerator : MonoBehaviour
 	[SerializeField] private Gradient _temperatureColorGradient;
 
 	[Space(5)]
+	[SerializeField] private Item[] _itemPrefabs;
+	[SerializeField, Range(0, 1)] private float _itemSpawnChance;
+	[SerializeField] private float _itemSpawnHeight;
+
+	[Space(5)]
 	[SerializeField] private GameObject _player;
 
 	private DataRequester _dataRequester;
@@ -53,6 +58,12 @@ public class LevelGenerator : MonoBehaviour
 			column.SetHeight(height);
 			column.SetColor(_temperatureColorGradient.Evaluate(tempPercent));
 			column.SetInfo(data);
+
+			if (Random.value <= _itemSpawnChance)
+			{
+				Item item = Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Length)], column.transform);
+				item.transform.position = new Vector3(column.transform.position.x, height + _itemSpawnHeight);
+			}
 
 			LevelColumns.Add(column);
 		}
